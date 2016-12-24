@@ -1,0 +1,89 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Presentacion", "1.Presentacion", "{1838643F-5310-4F11-9221-78359FB87FA4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Dominio", "2.Dominio", "{26810F97-5C7A-4ECA-AC22-CFEB33B3CFA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Infraestructura", "3.Infraestructura", "{724BC6C1-544D-45EE-BC78-B3F347AC036D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1Datos", "3.1Datos", "{BC66A8ED-C898-44A1-A107-6CED362B46E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2Transversal", "3.2Transversal", "{1FE6604E-C3F3-45E6-9D61-1A9DF182EC8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaJardinDelMar.UI", "PruebaJardinDelMar\PruebaJardinDelMar.UI.csproj", "{234A30DB-AA08-496E-AA5A-52C27823C2D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio.Core", "Dominio.Core\Dominio.Core.csproj", "{401EE1B6-2F97-428A-9131-F3EBEFF10B84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio.Implementacion", "Dominio.Implementacion\Dominio.Implementacion.csproj", "{1541DBD1-6FBD-4E4D-8399-E81E27F7FCC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio.Interfaces", "Dominio.Interfaces\Dominio.Interfaces.csproj", "{3C37A5E6-556B-4FC9-9B9E-1A8C6A432F83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos.Implementacion", "Datos.Implementacion\Datos.Implementacion.csproj", "{F132365C-BF18-4EB2-8F6B-8C270535F6B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos.Interfaces", "Datos.Interfaces\Datos.Interfaces.csproj", "{D067404B-D353-489B-86C6-5CA95576ECED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transversal.IoC", "Transversal.IoC\Transversal.IoC.csproj", "{AF157193-B3FD-4A63-A3EB-642CD0312C18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilitarios.Excepciones", "Utilitarios.Excepciones\Utilitarios.Excepciones.csproj", "{361A02D4-120A-41CA-AD2C-512C281B4CCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{234A30DB-AA08-496E-AA5A-52C27823C2D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{234A30DB-AA08-496E-AA5A-52C27823C2D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{234A30DB-AA08-496E-AA5A-52C27823C2D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{234A30DB-AA08-496E-AA5A-52C27823C2D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{401EE1B6-2F97-428A-9131-F3EBEFF10B84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{401EE1B6-2F97-428A-9131-F3EBEFF10B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{401EE1B6-2F97-428A-9131-F3EBEFF10B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{401EE1B6-2F97-428A-9131-F3EBEFF10B84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1541DBD1-6FBD-4E4D-8399-E81E27F7FCC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1541DBD1-6FBD-4E4D-8399-E81E27F7FCC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1541DBD1-6FBD-4E4D-8399-E81E27F7FCC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1541DBD1-6FBD-4E4D-8399-E81E27F7FCC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C37A5E6-556B-4FC9-9B9E-1A8C6A432F83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C37A5E6-556B-4FC9-9B9E-1A8C6A432F83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C37A5E6-556B-4FC9-9B9E-1A8C6A432F83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C37A5E6-556B-4FC9-9B9E-1A8C6A432F83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F132365C-BF18-4EB2-8F6B-8C270535F6B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F132365C-BF18-4EB2-8F6B-8C270535F6B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F132365C-BF18-4EB2-8F6B-8C270535F6B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F132365C-BF18-4EB2-8F6B-8C270535F6B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D067404B-D353-489B-86C6-5CA95576ECED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D067404B-D353-489B-86C6-5CA95576ECED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D067404B-D353-489B-86C6-5CA95576ECED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D067404B-D353-489B-86C6-5CA95576ECED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF157193-B3FD-4A63-A3EB-642CD0312C18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF157193-B3FD-4A63-A3EB-642CD0312C18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF157193-B3FD-4A63-A3EB-642CD0312C18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF157193-B3FD-4A63-A3EB-642CD0312C18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{361A02D4-120A-41CA-AD2C-512C281B4CCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{361A02D4-120A-41CA-AD2C-512C281B4CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{361A02D4-120A-41CA-AD2C-512C281B4CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{361A02D4-120A-41CA-AD2C-512C281B4CCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC66A8ED-C898-44A1-A107-6CED362B46E8} = {724BC6C1-544D-45EE-BC78-B3F347AC036D}
+		{1FE6604E-C3F3-45E6-9D61-1A9DF182EC8F} = {724BC6C1-544D-45EE-BC78-B3F347AC036D}
+		{234A30DB-AA08-496E-AA5A-52C27823C2D0} = {1838643F-5310-4F11-9221-78359FB87FA4}
+		{401EE1B6-2F97-428A-9131-F3EBEFF10B84} = {26810F97-5C7A-4ECA-AC22-CFEB33B3CFA8}
+		{1541DBD1-6FBD-4E4D-8399-E81E27F7FCC3} = {26810F97-5C7A-4ECA-AC22-CFEB33B3CFA8}
+		{3C37A5E6-556B-4FC9-9B9E-1A8C6A432F83} = {26810F97-5C7A-4ECA-AC22-CFEB33B3CFA8}
+		{F132365C-BF18-4EB2-8F6B-8C270535F6B0} = {BC66A8ED-C898-44A1-A107-6CED362B46E8}
+		{D067404B-D353-489B-86C6-5CA95576ECED} = {BC66A8ED-C898-44A1-A107-6CED362B46E8}
+		{AF157193-B3FD-4A63-A3EB-642CD0312C18} = {1FE6604E-C3F3-45E6-9D61-1A9DF182EC8F}
+		{361A02D4-120A-41CA-AD2C-512C281B4CCF} = {1FE6604E-C3F3-45E6-9D61-1A9DF182EC8F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Jugadores";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+     <title>Bienvenidos</title>
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>*@
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootbox.min.js"></script>
+    <script src="~/Scripts/jquery.Rut.js"></script>
+    <script src="~/Scripts/jquery.Rut.min.js"></script>
+ 
+</head>
+
+    
+<body>
+    <div class="col-md-12 card-wrap padding-0" >
+        <div class="col-md-6">
+            <div id="content" align="right">
+                <h1 align="right"> Ingreso de datos de jugador:</h1>
+                <div class="panel-body">
+                    <div class="input">
+                        <input type="text" class="form-control" placeholder="Nombre" id="txtNombre" aria-describedby="basic-addon1" onfocus="borrarTexto()">
+                        <br />
+                        <input type="text" class="form-control" placeholder="Apellido paterno" id="txtApellidoPaterno" aria-describedby="basic-addon1">
+                        <br />
+                        <input type="text" class="form-control" placeholder="Apellido materno" id="txtApellidoMaterno" aria-describedby="basic-addon1">
+                        <br />
+                        <input type="text" class="form-control" placeholder="Direccion" id="txtDireccion" aria-describedby="basic-addon1">
+                        <br />
+                        <input type="text" class="form-control" placeholder="Telefono" id="txtTelefono" aria-describedby="basic-addon1">
+                        <br />
+                        <input type="text" class="form-control" placeholder="Email" id="txtEmail" aria-describedby="basic-addon1">
+                        <br />
+                        <input type="text" class="form-control" placeholder="Rut sin puntos ni guión" id="txtRut" aria-describedby="basic-addon1" onkeyup="autoFormateaRut()">
+
+                    </div>
+                    <br />
+                    <br />
+                    <div align="center">
+                        <button class="btn btn-info" align="center" id="btnAgregar"><span class="glyphicon glyphicon-user"></span>CREAR JUGADOR</button>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+</body>
+
+<script type="text/javascript">
+    $("#btnAgregar").click(function () {
+        if ($('#txtNombre').val() == "" || $('#txtApellidoPaterno').val() == "" || $('#txtApellidoMaterno').val() == "" || $('#txtDireccion').val() == "" || $('#txtTelefono').val() == "" || $('#txtEmail').val() == "" || $('#txtRut').val() == "") {
+            bootbox.alert("Favor rellenar todos los campos!");
+        }
+        else {
+            if (!/^[a-zA-Z]*$/g.test($('#txtNombre').val()) || !/^[a-zA-Z]*$/g.test($('#txtApellidoPaterno').val()) || !/^[a-zA-Z]*$/g.test($('#txtApellidoMaterno').val())) {
+                bootbox.alert("Solo debe ingresar letras en los Campos Nombre y apellidos");
+                return false;
+            }
+            if (!/^[0-9?=.*!#$%^&*-k]+$/.test($('#txtRut').val())) {
+
+                bootbox.alert("Solo debe ingresar numeros en campo Rut");
+                return false;
+            }
+            else {
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("AgregarNuevoJugador", "Principal")',
+                    data: { nombre: $('#txtNombre').val(), apellidoPaterno: $('#txtApellidoPaterno').val(), apellidoMaterno: $('#txtApellidoMaterno').val(), direccion: $('#txtDireccion').val(), telefono: $('#txtTelefono').val(), email: $('#txtEmail').val(), rut: $('#txtRut').val() },
+                    success: function (data) {
+                        bootbox.dialog("Jugador agregado correctamente",function result()
+                        {
+                            if(result){
+                                window.location = '@Url.Action("Index","Principal")';
+                            }
+                        }
+                    )},
+                    error: function () {
+                        bootbox.alert("Error en procesar la solicitud");
+                    }
+
+
+                });
+
+
+            }
+            
+        }
+    });
+
+    function autoFormateaRut() {
+        $('#txtRut').Rut();
+    }
+</script>
+
+
+

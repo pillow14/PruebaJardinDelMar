@@ -1,0 +1,27 @@
+﻿
+@{                   
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>Bienvenidos</title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>*@
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="col-md-12 card-wrap padding-0">
+               <div class="col-md-6">
+                 <div id="content">
+                     <h1 align="right">Panel de Control:</h1>
+                  <div class="panel-heading bg-white border-none" style="padding:20px;">
+                    <div class="col-md-6 col-sm-6 col-sm-12">
+                        <img src='@Url.Action("GraficoEjemplo","Principal")' alt="Chart" />
+                    </div>
+                </div>
+            </div>
+            </div>
+           </div>
+</body>
