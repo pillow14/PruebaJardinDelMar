@@ -86,11 +86,11 @@ namespace PruebaJardinDelMar.UI.Areas.Principal.Controllers
         /// 
         /// </summary>
         /// <returns></returns>
-        public ActionResult GraficoEjemplo()
-        {
-            IEnumerable<EstadisticasPorJugador> listaDatos = jugadoresLogica.RankingJugadoresPorDiversasCaracteristicas();
-            return View();
-        }
+        //public ActionResult GraficoEjemplo()
+        //{
+        //    IEnumerable<EstadisticasPorJugador> listaDatos = jugadoresLogica.RankingJugadoresPorDiversasCaracteristicas();
+        //    return View();
+        //}
 
         
         #endregion
