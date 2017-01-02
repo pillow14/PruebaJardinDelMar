@@ -638,6 +638,7 @@
     <Content Include="Areas\Principal\Views\Principal\Jugadores.cshtml" />
     <Content Include="Areas\Principal\Views\Principal\ListarJugadores.cshtml" />
     <Content Include="Areas\Principal\Views\Principal\GraficoEjemplo.cshtml" />
+    <Content Include="Areas\Principal\Views\Principal\EstadisticasDetalle.cshtml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\img\404.png" />
     <Content Include="Images\img\500.png" />

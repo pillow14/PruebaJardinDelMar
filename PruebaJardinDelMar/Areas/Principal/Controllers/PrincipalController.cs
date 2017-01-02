@@ -77,6 +77,15 @@ namespace PruebaJardinDelMar.UI.Areas.Principal.Controllers
             return View("ListarJugadores", listaJugadores);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult EstadisticasDetalle()
+        {
+            return View();
+        }
+
         
         #endregion
 

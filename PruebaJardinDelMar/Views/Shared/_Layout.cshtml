@@ -60,13 +60,24 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" class="panel">
+                                <a data-toggle="collapse" data-parent="#accordion" class="panel" href="#collapseTwo">
                                     <span class="glyphicon glyphicon-th">
                                     </span>Estadísticas
                                 </a>
                             </h4>
                         </div>
                       </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <a href="@Url.Action("EstadisticasDetalle","Principal")">Estadisticas en detalle</a>
+                                    </td>
+                                </tr>
+                              </table>
+                        </div>
+                    </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
@@ -152,22 +163,7 @@
                 </div>
             </div>
            </div>
-        <div class="dropdown">
-            <ul class=" dropdown-menu">
-                                 
-                <li><span class="glyphicon glyphicon-pencil text-primary"></span><a href="@Url.Action("Jugadores","Principal")">Puntos</a></li>
-              
-                
-                <li><span class="glyphicon glyphicon-pencil text-primary"></span><a href="@Url.Action("Jugadores","Principal")">Rebotes</a></li>
-                   
-                
-                <li><span class="glyphicon glyphicon-pencil text-primary"></span><a href="@Url.Action("Jugadores","Principal")">Asistencias</a></li>
-                    
-              
-                <li><span class="glyphicon glyphicon-pencil text-primary"></span><a href="@Url.Action("Jugadores","Principal")">Robos de balón</a></li>
-                    
-            </ul>
-            </div>
+       
         </div>
 
      <script type="text/javascript">
