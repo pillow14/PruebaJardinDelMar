@@ -53,7 +53,7 @@
                                             <span class="glyphicon glyphicon-flash text-success"></span><a href="@Url.Action("ListarJugadores","Principal")">Lista jugadores</a>
                                         </td>
                                     </tr>
-                                  </table>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                                 </a>
                             </h4>
                         </div>
-                      </div>
+                    </div>
                     <div id="collapseTwo" class="panel-collapse collapse">
                         <div class="panel-body">
                             <table class="table">
@@ -75,7 +75,7 @@
                                         <a href="@Url.Action("EstadisticasDetalle","Principal")">Estadisticas en detalle</a>
                                     </td>
                                 </tr>
-                              </table>
+                            </table>
                         </div>
                     </div>
                     <div class="panel panel-default">
@@ -83,7 +83,7 @@
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
                                     <span class="glyphicon glyphicon-user">
-                                    </span>Account
+                                    </span>Entrenamientos
                                 </a>
                             </h4>
                         </div>
@@ -92,7 +92,7 @@
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Change Password</a>
+                                            <a href="#modalGoogleDrive" data-toggle="modal">Acceso a Cuenta Google-Drive</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -162,22 +162,62 @@
                     </div>
                 </div>
             </div>
-           </div>
-       
         </div>
 
-     <script type="text/javascript">
-         $(".panel").hover(
- function () {
-     $('#dropdown').collapse('show');
- }, function () {
-     $('#dropdown').collapse('hide');
- }
-);
+    </div>
+    <div class="modal fade" id="modalGoogleDrive" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" align="center">
+                    <img class="img-circle" id="img_logo" src="../Images/logo.png">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </div>
 
-     </script>
-    
-      
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+
+                    <!-- Begin # Login Form -->
+                    <form id="login-form">
+                        <div class="modal-body">
+                            <div id="div-login-msg">
+                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-login-msg">Ingrese sus credenciales</span>
+                            </div>
+                            <input id="login_username" class="form-control" type="text" placeholder="Usuario" required>
+                            <input id="login_password" class="form-control" type="password" placeholder="Contraseña" required>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Ingresar</button>
+                            </div>
+                            
+                        </div>
+                    </form>
+                    <!-- End # Login Form -->
+                    
+                     </div>
+                <!-- End # DIV Form -->
+
+            </div>
+        </div>
+        <script type="text/javascript" src="~/Scripts/Modal_Script.js"></script>
+    </div>
+
+                <script type="text/javascript">
+                    $(".panel").hover(
+            function () {
+                $('#dropdown').collapse('show');
+            }, function () {
+                $('#dropdown').collapse('hide');
+            }
+           );
+
+                </script>
+
+
 
 </body>
 </html>
